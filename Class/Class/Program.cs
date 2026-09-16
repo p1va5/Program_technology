@@ -37,9 +37,16 @@ namespace Class
             }
             Barista barista = FindBarista(drinks, baristas, "Латте");
             Console.WriteLine(barista.GetInfo());
+
             Shift shift = FindShift(drinks, shifts, "Латте");
             Console.WriteLine(shift.GetInfo());
             Console.WriteLine(GetTotalVolume(drinks));
+
+            var rat = GetBaristaRating(baristas); 
+            foreach(var name in rat)
+            {
+                Console.WriteLine($"{name.Key[..^5]} - {name.Value}");
+            }
         }
         /// <summary>
         /// Ищет первого баристу по названию напитка
@@ -87,14 +94,38 @@ namespace Class
             }
             return null;
         }
+        /// <summary>
+        /// Выдает весь объем напитков
+        /// </summary>
+        /// <param name="drinks">Полученный лист напитков</param>
+        /// <returns></returns>
         static int GetTotalVolume(List<Drink> drinks)
         {
             int totalVolume = 0;
+            if(drinks.Count==0) return totalVolume;
             for (int i = 0; i < drinks.Count; i++)
             {
                 totalVolume += drinks[i].Volume;
             }
             return totalVolume;
+        }
+        /// <summary>
+        /// Проверяет если ли в Dictionary имя, если такого нет добавляет в сипок его имя и рейтинг 
+        /// </summary>
+        /// <param name="baristas">Полученный лист барист</param>
+        /// <returns></returns>
+        static Dictionary<string, double> GetBaristaRating(List<Barista> baristas)
+        {
+            Dictionary<string, double> result = new Dictionary<string, double>();
+            for (int i = 0; i < baristas.Count; i++)
+            {
+                Barista b = baristas[i];
+                if(!result.ContainsKey(b.FullName))
+                {
+                    result.Add(b.FullName, b.Rating);
+                }
+            }
+            return result;
         }
     }
 }
