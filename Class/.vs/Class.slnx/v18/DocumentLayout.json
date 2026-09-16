@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|solutionrelative:class\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|d:\\vs\\cs\\class\\class\\csvrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|solutionrelative:class\\csvrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|d:\\vs\\cs\\class\\class\\barista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|solutionrelative:class\\barista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|d:\\vs\\cs\\class\\class\\inmemoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|solutionrelative:class\\drink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|d:\\vs\\cs\\class\\class\\barista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|solutionrelative:class\\barista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|d:\\vs\\cs\\class\\class\\csvrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|solutionrelative:class\\csvrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A815EA51-E8B5-B21D-27AA-38F40FF27D8E}|Class\\Class.csproj|d:\\vs\\cs\\class\\class\\shift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "CsvRepository.cs",
               "DocumentMoniker": "D:\\vs\\cs\\Class\\Class\\CsvRepository.cs",
               "RelativeDocumentMoniker": "Class\\CsvRepository.cs",
@@ -56,9 +56,10 @@
               "RelativeDocumentMoniker": "Class\\InMemoryRepository.cs",
               "ToolTip": "D:\\vs\\cs\\Class\\Class\\InMemoryRepository.cs",
               "RelativeToolTip": "Class\\InMemoryRepository.cs",
-              "ViewState": "AgIAAA8AAAAAF5zB3ycdwAsAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAACAC87g75MgwA0AAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-16T09:26:41.682Z"
+              "WhenOpened": "2026-09-16T09:26:41.682Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -70,19 +71,21 @@
               "RelativeToolTip": "Class\\Drink.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T11:45:32.247Z"
+              "WhenOpened": "2026-09-15T11:45:32.247Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Barista.cs",
               "DocumentMoniker": "D:\\vs\\cs\\Class\\Class\\Barista.cs",
               "RelativeDocumentMoniker": "Class\\Barista.cs",
               "ToolTip": "D:\\vs\\cs\\Class\\Class\\Barista.cs",
               "RelativeToolTip": "Class\\Barista.cs",
-              "ViewState": "AgIAAAQAAABQ/u4dNcItwBkAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAof/eOGuE7wBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T11:32:32.029Z"
+              "WhenOpened": "2026-09-15T11:32:32.029Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -102,9 +105,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\vs\\cs\\Class\\Class\\Program.cs",
               "RelativeDocumentMoniker": "Class\\Program.cs",
-              "ToolTip": "D:\\vs\\cs\\Class\\Class\\Program.cs*",
-              "RelativeToolTip": "Class\\Program.cs*",
-              "ViewState": "AgIAAAwAAAAAu0VgrM8pwC0AAAAyAAAAAAAAAA==",
+              "ToolTip": "D:\\vs\\cs\\Class\\Class\\Program.cs",
+              "RelativeToolTip": "Class\\Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-15T09:51:28.463Z",
               "EditorCaption": ""

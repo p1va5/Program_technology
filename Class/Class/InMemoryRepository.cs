@@ -10,11 +10,11 @@ internal class InMemoryRepository
         _baristas = new List<Barista>()
         {
             new Barista { Id = 1, FullName = "Петров П.П.",  Experience = 3, Rating = 4.8 },
-            new Barista { Id = 2, FullName = "Павлов В.И.",  Experience = 3, Rating = 4.8 },
-            new Barista { Id = 3, FullName = "Иванов И.И.",  Experience = 3, Rating = 4.8 },
-            new Barista { Id = 4, FullName = "Сидоров А.Р.",  Experience = 3, Rating = 4.8 },
-            new Barista { Id = 5, FullName = "Кузнецов П.Д.",  Experience = 3, Rating = 4.8 },
-            new Barista { Id = 6, FullName = "Смирнов Д.В.",  Experience = 3, Rating = 4.8 }
+            new Barista { Id = 2, FullName = "Павлов В.И.",  Experience = 2, Rating = 3.7 },
+            new Barista { Id = 3, FullName = "Иванов И.И.",  Experience = 5, Rating = 1.9 },
+            new Barista { Id = 4, FullName = "Сидоров А.Р.",  Experience = 7, Rating = 2.3 },
+            new Barista { Id = 5, FullName = "Кузнецов П.Д.",  Experience = 1, Rating = 4.5 },
+            new Barista { Id = 6, FullName = "Смирнов Д.В.",  Experience = 2, Rating = 4.1 }
         };
         _shifts = new List<Shift>()
         {

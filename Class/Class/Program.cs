@@ -36,17 +36,23 @@ namespace Class
                     }
             }
             Barista barista = FindBarista(drinks, baristas, "Латте");
-            Console.WriteLine(barista.GetInfo());
+            Console.WriteLine(barista?.GetInfo() ?? "null");
 
             Shift shift = FindShift(drinks, shifts, "Латте");
-            Console.WriteLine(shift.GetInfo());
-            Console.WriteLine(GetTotalVolume(drinks));
+            Console.WriteLine(shift?.GetInfo() ?? "null");
+
+            Console.WriteLine(GetTotalVolume(drinks)+ "мл");
 
             var rat = GetBaristaRating(baristas); 
             foreach(var name in rat)
             {
                 Console.WriteLine($"{name.Key[..^5]} - {name.Value}");
             }
+
+            PrintAllDrinks(baristas, drinks, shifts);
+
+            Barista? barista2 = FindBarista(drinks, baristas, "Неизвестный напиток");
+            Console.WriteLine(barista2?.GetInfo() ?? "null");
         }
         /// <summary>
         /// Ищет первого баристу по названию напитка
@@ -126,6 +132,36 @@ namespace Class
                 }
             }
             return result;
+        }
+        /// <summary>
+        /// Выводит всю информцию о напитка кто когда продал
+        /// </summary>
+        /// <param name="baristas">Полученный лист барист</param>
+        /// <param name="drinks">Полученный лист напитков</param>
+        /// <param name="shifts">Полученный лист смен</param>
+        static void PrintAllDrinks(List<Barista> baristas, List<Drink> drinks, List<Shift> shifts)
+        {
+            for(int i = 0;i < drinks.Count;i++)
+            {
+                Drink drink = drinks[i];
+                string baristaName = "-";
+                string shiftTime = "-";
+                for (int j = 0; j < shifts.Count; j++)
+                {
+                    if(shifts[j].Id == drink.ShiftId)
+                    {
+                        shiftTime = shifts[j].Time;
+                    }    
+                }
+                for (int j = 0; j < baristas.Count; j++)
+                {
+                    if (baristas[j].Id == drink.BaristaId)
+                    {
+                        baristaName = baristas[j].FullName;
+                    }
+                }
+                Console.WriteLine($"{drink.GetInfo()} - бариста {baristaName}, смена {shiftTime}");
+            }
         }
     }
 }
