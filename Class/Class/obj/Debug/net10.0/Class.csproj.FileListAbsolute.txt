@@ -13,3 +13,4 @@ D:\vs\cs\Class\Class\obj\Debug\net10.0\Class.pdb
 D:\vs\cs\Class\Class\obj\Debug\net10.0\Class.genruntimeconfig.cache
 D:\vs\cs\Class\Class\obj\Debug\net10.0\ref\Class.dll
 D:\vs\cs\Class\Class\obj\Debug\net10.0\Class.csproj.Up2Date
+D:\vs\cs\Class\Class\obj\Debug\net10.0\Class.sourcelink.json

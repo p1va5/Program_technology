@@ -39,6 +39,7 @@ namespace Class
             Console.WriteLine(barista.GetInfo());
             Shift shift = FindShift(drinks, shifts, "Латте");
             Console.WriteLine(shift.GetInfo());
+            Console.WriteLine(GetTotalVolume(drinks));
         }
         /// <summary>
         /// Ищет первого баристу по названию напитка
@@ -86,6 +87,14 @@ namespace Class
             }
             return null;
         }
-
+        static int GetTotalVolume(List<Drink> drinks)
+        {
+            int totalVolume = 0;
+            for (int i = 0; i < drinks.Count; i++)
+            {
+                totalVolume += drinks[i].Volume;
+            }
+            return totalVolume;
+        }
     }
 }
