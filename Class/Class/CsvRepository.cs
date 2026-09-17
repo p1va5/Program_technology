@@ -14,13 +14,13 @@ internal class CsvRepository
         {
             string[] parts = lines[i].Split(';');
             if (parts.Length < 6) continue;
-            Drink b = new Drink();
-            b.Id = int.Parse(parts[0]);
-            b.Name = parts[1];
-            b.ShiftId = int.Parse(parts[2]);
-            b.BaristaId = int.Parse(parts[3]);
-            b.Price = decimal.Parse(parts[4]);
-            b.Volume = int.Parse(parts[5]);
+            var Id = int.Parse(parts[0]);
+            var Name = parts[1];
+            var ShiftId = int.Parse(parts[2]);
+            var BaristaId = int.Parse(parts[3]);
+            var Price = decimal.Parse(parts[4]);
+            var Volume = int.Parse(parts[5]);
+            Drink b = new Drink(Id, Name, ShiftId, BaristaId, Price, Volume);
             result.Add(b);
         }
         return result;
@@ -34,11 +34,11 @@ internal class CsvRepository
         {
             string[] parts = lines[i].Split(';');
             if (parts.Length < 4) continue;
-            Barista b = new Barista();
-            b.Id = int.Parse(parts[0]);
-            b.FullName = parts[1];
-            b.Experience = int.Parse(parts[2]);
-            b.Rating = double.Parse(parts[3]);
+            var Id = int.Parse(parts[0]);
+            var FullName = parts[1];
+            var Experience = int.Parse(parts[2]);
+            var Rating = double.Parse(parts[3]);
+            Barista b = new Barista(Id, FullName, Experience, Rating);
             result.Add(b);
         }
         return result;
@@ -52,10 +52,10 @@ internal class CsvRepository
         {
             string[] parts = lines[i].Split(';');
             if (parts.Length < 3) continue;
-            Shift b = new Shift();
-            b.Id = int.Parse(parts[0]);
-            b.Time = parts[1];
-            b.Date = DateTime.Parse(parts[2]);
+            var Id = int.Parse(parts[0]);
+            var Time = parts[1];
+            var Date = DateTime.Parse(parts[2]);
+            Shift b = new Shift(Id, Time, Date);
             result.Add(b);
         }
         return result;

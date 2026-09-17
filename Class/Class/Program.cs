@@ -16,25 +16,39 @@ namespace Class
             List<Drink> drinks = null;
             List<Barista> baristas = null;
             List<Shift> shifts = null;
-            switch (choice)
+            try
             {
-                case 1:
-                    {
-                        InMemoryRepository repository = new InMemoryRepository();
-                        drinks = repository.GetDrinks();
-                        baristas = repository.GetBaristas();
-                        shifts = repository.GetShifts();
-                        break;
-                    }
-                case 2:
-                    {
-                        CsvRepository repository = new CsvRepository("data");
-                        drinks = repository.GetDrinks();
-                        baristas = repository.GetBaristas();
-                        shifts = repository.GetShifts();
-                        break;
-                    }
+                switch (choice)
+                {
+                    case 1:
+                        {
+                            InMemoryRepository repository = new InMemoryRepository();
+                            drinks = repository.GetDrinks();
+                            baristas = repository.GetBaristas();
+                            shifts = repository.GetShifts();
+                            break;
+                        }
+                    case 2:
+                        {
+                            CsvRepository repository = new CsvRepository("data");
+                            drinks = repository.GetDrinks();
+                            baristas = repository.GetBaristas();
+                            shifts = repository.GetShifts();
+                            break;
+                        }
+                }
             }
+            catch (ArgumentOutOfRangeException e)
+            {
+                Console.WriteLine(e.Message);
+                return;
+            }
+            catch (ArgumentNullException e)
+            {
+                Console.WriteLine(e.Message);
+                return;
+            }
+
             Barista barista = FindBarista(drinks, baristas, "Латте");
             Console.WriteLine(barista?.GetInfo() ?? "null");
 

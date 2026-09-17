@@ -9,39 +9,44 @@ internal class InMemoryRepository
     {
         _baristas = new List<Barista>()
         {
-            new Barista { Id = 1, FullName = "Петров П.П.",  Experience = 3, Rating = 4.8 },
-            new Barista { Id = 2, FullName = "Павлов В.И.",  Experience = 2, Rating = 3.7 },
-            new Barista { Id = 3, FullName = "Иванов И.И.",  Experience = 5, Rating = 1.9 },
-            new Barista { Id = 4, FullName = "Сидоров А.Р.",  Experience = 7, Rating = 2.3 },
-            new Barista { Id = 5, FullName = "Кузнецов П.Д.",  Experience = 1, Rating = 4.5 },
-            new Barista { Id = 6, FullName = "Смирнов Д.В.",  Experience = 2, Rating = 4.1 }
+            new Barista(1,"Петров П.П.", 3, 4.8),
+            new Barista(2, "Павлов В.И.", 2, 3.7),
+            new Barista(3, "Иванов И.И.", 5, 1.9),
+            new Barista(4, "Сидоров А.Р.", 7, 2.3),
+            new Barista(5, "Кузнецов П.Д.", 1, 4.5),
+            new Barista(6, "Смирнов Д.В.",  2, 4.1),
+            //new Barista(7, "Тест Т.Т.",  2, -4.1)
+
         };
+
         _shifts = new List<Shift>()
         {
-            new Shift { Id = 1, Time = "Утренняя", Date = new DateTime(2025, 9, 1)},
-            new Shift { Id = 2, Time = "Дневная", Date = new DateTime(2025, 9, 1)},
-            new Shift { Id = 3, Time = "Вечерняя", Date = new DateTime(2025, 9, 1)},
-            new Shift { Id = 4, Time = "Утренняя", Date = new DateTime(2025, 9, 2)},
-            new Shift { Id = 5, Time = "Дневная", Date = new DateTime(2025, 9, 2)},
-            new Shift { Id = 6, Time = "Вечерняя", Date = new DateTime(2025, 9, 2)},
-            new Shift { Id = 7, Time = "Утренняя", Date = new DateTime(2025, 9, 3)},
-            new Shift { Id = 8, Time = "Дневная", Date = new DateTime(2025, 9, 3)},
-            new Shift { Id = 9, Time = "Вечерняя", Date = new DateTime(2025, 9, 3)},
+            new Shift(1, "Утренняя", new DateTime(2025, 9, 1)),
+            new Shift(2, "Дневная",  new DateTime(2025, 9, 1)),
+            new Shift(3, "Вечерняя", new DateTime(2025, 9, 1)),
+            new Shift(4, "Утренняя", new DateTime(2025, 9, 2)),
+            new Shift(5, "Дневная",  new DateTime(2025, 9, 2)),
+            new Shift(6, "Вечерняя", new DateTime(2025, 9, 2)),
+            new Shift(7, "Утренняя", new DateTime(2025, 9, 3)),
+            new Shift(8, "Дневная",  new DateTime(2025, 9, 3)),
+            new Shift(9, "Вечерняя", new DateTime(2025, 9, 3))
         };
+
         _drinks = new List<Drink>()
         {
-            new Drink {Id = 1, Name = "Латте", ShiftId = 1, BaristaId = 1, Price = 200, Volume = 300},
-            new Drink {Id = 2, Name = "Американо", ShiftId = 2, BaristaId = 3, Price = 180, Volume = 300},
-            new Drink {Id = 3, Name = "Эспрессо", ShiftId = 2, BaristaId = 3, Price = 190, Volume = 270},
-            new Drink {Id = 4, Name = "Раф", ShiftId = 3, BaristaId = 5, Price = 250, Volume = 250},
-            new Drink {Id = 5, Name = "Мокко", ShiftId = 3, BaristaId = 5, Price = 200, Volume = 270},
-            new Drink {Id = 6, Name = "Капучино", ShiftId = 4, BaristaId = 3, Price = 220, Volume = 250},
-            new Drink {Id = 7, Name = "Черный чай", ShiftId = 4, BaristaId = 3, Price = 210, Volume = 300},
-            new Drink {Id = 8, Name = "Зеленый чай", ShiftId = 5, BaristaId = 2, Price = 180, Volume = 270},
-            new Drink {Id = 9, Name = "Улун", ShiftId = 5, BaristaId = 2, Price = 190, Volume = 300},
-            new Drink {Id = 10, Name = "Ромашковый чай", ShiftId = 6, BaristaId = 3, Price = 200, Volume = 300},
-            new Drink {Id = 11, Name = "Имбирный чай", ShiftId = 6, BaristaId = 3, Price = 210, Volume = 250},
-            new Drink {Id = 12, Name = "Красный чай", ShiftId = 7, BaristaId = 6, Price = 220, Volume = 250},
+            new Drink(1, "Латте", 1, 1, 200, 300),
+            new Drink(2, "Американо", 2, 3, 180, 300),
+            new Drink(3, "Эспрессо", 2, 3, 190, 270),
+            new Drink(4, "Раф", 3, 5, 250, 250),
+            new Drink(5, "Мокко", 3, 5, 200, 270),
+            new Drink(6, "Капучино", 4, 3, 220, 250),
+            new Drink(7, "Черный чай", 4, 3, 210, 300),
+            new Drink(8, "Зеленый чай", 5, 2, 180, 270),
+            new Drink(9, "Улун", 5, 2, 190, 300),
+            new Drink(10, "Ромашковый чай", 6, 3, 200, 300),
+            new Drink(11, "Имбирный чай", 6, 3, 210, 250),
+            new Drink(12, "Красный чай", 7, 6, 220, 250),
+            //new Drink(13, "Тест", 7, 6, -2, -2)
         };
     }
     public List<Barista> GetBaristas() { return _baristas; }
